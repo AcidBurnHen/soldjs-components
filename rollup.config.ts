@@ -1,6 +1,19 @@
-import withSolid from 'rollup-preset-solid';
+import withSolid from "rollup-preset-solid";
 
-export default withSolid({
-  input: 'src/index.tsx',
-  targets: ['esm', 'cjs'],
-});
+export default withSolid([
+  {
+    input: "src/alert.tsx",
+    targets: ["esm", "cjs"],
+    writePackageJson: true
+  },
+  {
+    input: "src/gallery.tsx",
+    targets: ["esm", "cjs"],
+    writePackageJson: true
+  },
+  {
+    input: "src/toggle.tsx",
+    targets: ["esm", "cjs"],
+    writePackageJson: true
+  }
+]);

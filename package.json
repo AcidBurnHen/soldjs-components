@@ -1,17 +1,17 @@
 {
   "version": "0.0.0",
-  "name": "{{name_of_lib}}",
+  "name": "solid-components",
   "description": "{{desc_of_lib}}",
   "license": "MIT",
-  "author": "{{me}}",
+  "author": "Marin Luic",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/{{me}}/{{name_of_lib}}.git"
+    "url": "git+https://github.com/AcidBurnHen/solid-components.git"
   },
-  "homepage": "https://github.com/{{me}}/{{name_of_lib}}#readme",
+  "homepage": "https://github.com/AcidBurnHen/solid-components#readme",
   "bugs": {
-    "url": "https://github.com/{{me}}/{{name_of_lib}}/issues"
+    "url": "https://github.com/AcidBurnHen/solid-components/issues"
   },
   "private": false,
   "sideEffects": false,
@@ -19,21 +19,6 @@
   "files": [
     "dist"
   ],
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "exports": {
-    ".": {
-      "solid": "./dist/source/index.jsx",
-      "import": "./dist/esm/index.js",
-      "browser": {
-        "import": "./dist/esm/index.js",
-        "require": "./dist/cjs/index.js"
-      },
-      "require": "./dist/cjs/index.js",
-      "node": "./dist/cjs/index.js"
-    }
-  },
   "scripts": {
     "dev": "vite serve dev",
     "test": "echo \"test not setup\"",
@@ -43,7 +28,6 @@
     "update-deps": "taze -w && pnpm i",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {},
   "peerDependencies": {
     "solid-js": ">=1.0.0"
   },
@@ -51,9 +35,9 @@
     "prettier": "2.7.1",
     "rollup": "^2.77.2",
     "rollup-preset-solid": "^1.4.0",
-    "typescript": "^4.7.4",
     "solid-js": "^1.4.8",
     "taze": "^0.7.6",
+    "typescript": "^4.7.4",
     "vite": "^3.0.4",
     "vite-plugin-solid": "^2.3.0"
   },
