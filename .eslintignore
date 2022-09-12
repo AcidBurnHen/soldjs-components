@@ -1,0 +1,5 @@
+rollup.config.ts
+.eslintrc.cjs
+/dist
+/node_modules
+/dev

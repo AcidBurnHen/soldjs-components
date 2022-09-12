@@ -1,12 +1,10 @@
-import type { Component } from "solid-js";
-import logo from "./logo.svg";
-import styles from "./App.module.css";
 import { Gallery } from "../dist/gallery/gallery.jsx";
+import AlertExample from "./examples/AlertExample.jsx";
 
-const App: Component = () => {
+function App() {
   return (
     <div>
-      <Gallery></Gallery>
+      <AlertExample />
     </div>
   );
 };

@@ -26,12 +26,17 @@
     "prepublishOnly": "pnpm build",
     "format": "prettier -w \"src/**/*.{js,ts,json,css,tsx,jsx}\" \"dev/**/*.{js,ts,json,css,tsx,jsx}\"",
     "update-deps": "taze -w && pnpm i",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint -f unix \"src/**/*.{ts,tsx}\""
   },
   "peerDependencies": {
     "solid-js": ">=1.0.0"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.23.1",
+    "eslint-plugin-tsdoc": "^0.2.16",
     "prettier": "2.7.1",
     "rollup": "^2.77.2",
     "rollup-preset-solid": "^1.4.0",
