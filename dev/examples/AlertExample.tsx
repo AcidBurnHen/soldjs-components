@@ -10,7 +10,7 @@ function AlertExample() {
     return (
         <div>
             <div onClick={openAlert}>Open alert</div>
-            <Alert when={state()} type="success" msg="test me out"  />
+            <Alert when={state()} type="success" msg="test me out" />
         </div>
     )
 }

@@ -4,7 +4,7 @@ export default withSolid([
   {
     input: "src/alert.tsx",
     targets: ["esm", "cjs"],
-    writePackageJson: true
+    writePackageJson: true,
   },
   {
     input: "src/gallery.tsx",
