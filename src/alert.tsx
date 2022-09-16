@@ -1,7 +1,7 @@
 import { splitProps, createSignal } from "solid-js";
 import { Show } from "solid-js/web";
 
-import "./alert.module.css";
+import styles from "./alert.module.css";
 
 interface AlertProps {
   when: boolean;
@@ -38,8 +38,8 @@ export function Alert(props: AlertProps) {
   };
 
   /** Custom alert class, if not set, defaults to alert */
-  let alertClass = props.elClass === undefined ? "alert" : props.elClass
-  let positionClass = "position";
+  let alertClass = props.elClass === undefined ? styles.alert : props.elClass
+  let positionClass = styles.position;
   /** Overrides all styles if set to true */
   if(props.changeStyle === true) {
     alertClass = props.elClass === undefined ? "" : props.elClass

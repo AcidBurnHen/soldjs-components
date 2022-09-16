@@ -1,7 +1,3 @@
-.position {
-    z-index: 100;
-}
-
 .alert {
     display: flex;
     justify-items: center;

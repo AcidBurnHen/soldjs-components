@@ -21,7 +21,9 @@ export default withSolid([
   {
     plugins: [
       postcss({
+        extract: true,
         modules: true,
+        minimize: true,
         plugins: [
           autoprefixer
         ]

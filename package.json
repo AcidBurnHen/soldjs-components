@@ -35,6 +35,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
+    "autoprefixer": "^10.4.11",
     "eslint": "^8.23.1",
     "eslint-plugin-tsdoc": "^0.2.16",
     "postcss": "^8.4.16",
@@ -51,8 +52,5 @@
   "keywords": [
     "solid"
   ],
-  "packageManager": "pnpm@7.5.0",
-  "dependencies": {
-    "autoprefixer": "^10.4.11"
-  }
+  "packageManager": "pnpm@7.5.0"
 }
