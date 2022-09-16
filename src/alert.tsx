@@ -1,6 +1,8 @@
 import { splitProps, createSignal } from "solid-js";
 import { Show } from "solid-js/web";
 
+import "./alert.module.css";
+
 interface AlertProps {
   when: boolean;
   type: "success" | "error";
