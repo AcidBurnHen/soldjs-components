@@ -36,11 +36,17 @@ export function Alert(props: AlertProps) {
   };
 
   /** Custom alert class, if not set, defaults to alert */
-  const alertClass = props.elClass === undefined ? "alert" : props.elClass
+  let alertClass = props.elClass === undefined ? "alert" : props.elClass
+  let positionClass = "position";
+  /** Overrides all styles if set to true */
+  if(props.changeStyle === true) {
+    alertClass = props.elClass === undefined ? "" : props.elClass
+    positionClass = ""
+  }
 
   return (
     <Show when={alert().when}>
-      <div class={alertClass}>
+      <div class={`${positionClass} ${alertClass}`}>
         <p class={`${alertClass}_msg`}>{props.msg}</p>
         <p class={`${alertClass}_x`} onClick={closeModal}>X</p>
       </div>
