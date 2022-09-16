@@ -37,20 +37,41 @@ export function Alert(props: AlertProps) {
     setAlert({ when: false });
   };
 
-  /** Custom alert class, if not set, defaults to alert */
-  let alertClass = props.elClass === undefined ? styles.alert : props.elClass
+  let alertClass: string;
+
+  const createClass = (slug?: string) => {
+    /**
+     * Function to check which alert class to display
+     * This function will be useful for other parts of the library so it will be removed from this file
+     * after further testing, and improved for better flexibility.
+     *
+     * @param slug - Optional paramter to add elements and modifiers to the block class
+     *
+     * @returns A class string
+     */
+    if (props.elClass === undefined) {
+      alertClass = slug === undefined ? styles.alert : styles[`alert_${slug}`];
+    } else {
+      alertClass = slug === undefined ? props.elClass : `${props.elClass}_${slug}`;
+    }
+
+    return alertClass;
+  };
+
   let positionClass = styles.position;
   /** Overrides all styles if set to true */
-  if(props.changeStyle === true) {
-    alertClass = props.elClass === undefined ? "" : props.elClass
-    positionClass = ""
+  if (props.changeStyle === true) {
+    alertClass = props.elClass === undefined ? "" : props.elClass;
+    positionClass = "";
   }
 
   return (
     <Show when={alert().when}>
-      <div class={`${positionClass} ${alertClass}`}>
-        <p class={`${alertClass}_msg`}>{props.msg}</p>
-        <p class={`${alertClass}_x`} onClick={closeModal}>X</p>
+      <div class={`${positionClass} ${createClass()}`}>
+        <p class={createClass("msg")}>{props.msg}</p>
+        <p class={createClass("x")} onClick={closeModal}>
+          X
+        </p>
       </div>
     </Show>
   );

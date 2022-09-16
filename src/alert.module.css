@@ -1,4 +1,20 @@
+.position {
+    z-index: 100;
+    width: 60%;
+}
+
 .alert {
-    display: flex;
+    grid-template-columns: 90 10%;
+    display: grid;
     justify-items: center;
 }
+
+.alert_msg {
+    grid-row: 1;
+}
+
+.alert_x {
+    grid-row: 1;
+    grid-column: 2;
+}
+
